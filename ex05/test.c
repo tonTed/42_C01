@@ -6,9 +6,11 @@
 /*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 11:07:46 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/12 19:45:44 by tonted           ###   ########.fr       */
+/*   Updated: 2021/02/12 19:44:27 by tonted           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 #include <unistd.h>
 
@@ -27,4 +29,10 @@ void	ft_putstr(char *str)
 		ft_putchar(str[i]);
 		i++;
 	}
+}
+
+int main()
+{
+	ft_putstr("Ecole 42");
+	return 0;
 }

@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/12 11:07:46 by tblanco           #+#    #+#             */
-/*   Updated: 2021/02/12 19:45:44 by tonted           ###   ########.fr       */
+/*   Created: 2021/02/12 19:52:52 by tonted            #+#    #+#             */
+/*   Updated: 2021/02/12 19:56:15 by tonted           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int ft_strlen(char *str)
 {
-	write(1, &c, 1);
+    int i;
+
+    i = 0;
+    
+    while(str[i] != '\0')
+        i++;
+    return i;
 }
 
-void	ft_putstr(char *str)
+int main(int argc, char const *argv[])
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+    printf("%d\n", ft_strlen(""));
+    return 0;
 }
