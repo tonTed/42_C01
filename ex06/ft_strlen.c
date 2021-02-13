@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tonted <tonted@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 19:52:52 by tonted            #+#    #+#             */
-/*   Updated: 2021/02/12 19:57:23 by tonted           ###   ########.fr       */
+/*   Updated: 2021/02/13 18:58:28 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while(str[i] != '\0')
-        i++;
-    return i;
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
