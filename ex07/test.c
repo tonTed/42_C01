@@ -6,7 +6,7 @@
 /*   By: tblanco <tblanco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 19:58:52 by tonted            #+#    #+#             */
-/*   Updated: 2021/02/13 17:44:19 by tblanco          ###   ########.fr       */
+/*   Updated: 2021/02/13 17:40:37 by tblanco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,40 @@ void	ft_swap(int *a, int *b)
 	*b = swap;
 }
 
-void	ft_rev_int_tab(int *tab, int size)
+void    ft_rev_int_tab(int *tab, int size)
 {
-	int i;
+    int i;
 
-	i = 0;
-	while (i < size)
-	{
-		ft_swap(&tab[i], &tab[size - 1]);
-		i++;
-		size--;
-	}
+    i = 0;
+    while (i < size)
+    {
+        ft_swap(&tab[i], &tab[size - 1]);
+        i++;
+        size--;
+    }
+
+}
+
+int main()
+{
+    int tab[9];
+    int i;
+
+    i = 0;
+    while(i < sizeof(tab)/4)
+    {
+        tab[i] = i * 5;
+        printf("%d\n", tab[i]);
+        i++;
+    }
+    printf("++++++++++++++++++\n");
+    ft_rev_int_tab(tab, sizeof(tab)/4);
+    
+    i = 0;
+    while(i < sizeof(tab)/4)
+    {
+        printf("%d\n", tab[i]);
+        i++;
+    }
+    return 0;
 }
